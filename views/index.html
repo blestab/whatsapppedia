@@ -1,0 +1,65 @@
+
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
+<!-- pug: https://pugjs.org/ -->
+<!-- haml: http://haml.info/ -->
+<!-- hbs(handlebars): http://handlebarsjs.com/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>WhatsAppedia</title>
+    <meta name="description" content="A WikiPedia bot for WhatsApp">
+    <link id="favicon" rel="icon" href="favicon.png" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/chota@latest">
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+    
+    <!-- import the webpage's client-side javascript file -->
+    <script src="/client.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1 style="text-align:center">
+        WikiBot <span class="text-grey">for WhatsApp</span> <br>🤖 📜 💬
+      </h1>
+
+    </header>
+
+    <main style="text-align:center">
+      <img src="demo.png" style="width:100%; max-width:600px; margin-bottom:1em">
+      <p>
+        WhatsApp any term to <span class="text-grey">WikiBot 🤖</span> and get a reply with a summary from its WikiPedia page.
+      </p>
+      <br>
+      <p>
+        Get it at 👉 <a href="https://bit.ly/2Z7My2j">bit.ly/2Z7My2j</a> and say <code>Hi</code>
+      </p>
+      <section class="dreams">
+        <ul id="dreams"></ul>
+      </section>
+    </main>
+
+    <footer style="text-align:center">
+      👨‍💻 Made by <a href="https://twitter.com/blestab">@blestab</a><br><br>
+      <a href="https://github.com/blestab/whatsapppedia"><img src="https://icongr.am/fontawesome/github.svg?size=20" style="vertical-align"></a>
+    </footer>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-57856524-28"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-47410137-1');
+</script>
+
+  </body>
+</html>
