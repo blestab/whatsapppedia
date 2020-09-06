@@ -26,10 +26,10 @@ app.post('/incoming', (req, res) => {
     console.log('body:', body["Abstract"]);
     
     if(body["Abstract"] == ""){
-	    body["Abstract"]= body["RelatedTopics"][0]["Text"]
+	    body["Abstract"] = 'I am sorry i could not find information about "' +req.body.Body+'"'
 	  }
-    
-    var msg = twiml.message(`*`+body["Heading"]+`*
+    var msgHeading = (body["Heading"])?body["Heading"]:'Results Not Found'
+    var msg = twiml.message(`*`+msgHeading+`*
 
 `+body["Abstract"]);
   res.writeHead(200, {'Content-Type': 'text/xml'});
